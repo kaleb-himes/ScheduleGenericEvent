@@ -3,10 +3,10 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>DayOff</title>
+    <title>Schedule</title>
   </head>
   <body>
-  <h1>Day Off</h1>
+  <h1>Schedule</h1>
     <a href ="/web/events.html">Add a new event to your schedule</a>
   <br />
   <br />

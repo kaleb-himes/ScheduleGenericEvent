@@ -17,10 +17,13 @@ public class ScheduleController {
 
 	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	public ModelAndView Schedule() {
-		return new ModelAndView("event", "command", new Event());
+		return new ModelAndView("events", "command", new Event());
 	}
 	@RequestMapping(value ="/addEvent", method = RequestMethod.POST)
 	public String eventSubmit(@ModelAttribute("SpringWeb")Event event, Model model) {
+		String day = event.getDay();
+		String month = event.getMonth();
+		String year = event.getYear();
 		//TODO
 		// build string for query
 		// build query with event data - query.insertEvent()
