@@ -25,12 +25,12 @@ public class DaysOffParser {
         JsonNode dateDate;
         for (int i = 0; i < date2.size() - 1; i++){
             date3 = date2.get(i);
-            dateDate = date3.get("date");
+            dateDate = date3.get("event");
             dateValue = dateDate.get("value");
             String date = dateValue.asText();
             sb.append(date + ", ");
         }
-        sb.append(date2.get(date2.size() - 1).get("date").get("value").asText());
+        sb.append(date2.get(date2.size() - 1).get("event").get("value").asText());
         return sb;
     }
 }

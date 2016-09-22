@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ExampleWebapp" />
+        <module name="ScheduleGenericEvent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ExampleWebapp" target="1.5" />
+      <module name="ScheduleGenericEvent" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

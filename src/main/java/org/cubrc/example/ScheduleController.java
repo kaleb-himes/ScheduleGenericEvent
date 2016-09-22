@@ -17,18 +17,25 @@ public class ScheduleController {
 
 	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	public ModelAndView Schedule() {
-		return new ModelAndView("events", "command", new Event());
+		return new ModelAndView("events", "Event", new Event());
 	}
 	@RequestMapping(value ="/addEvent", method = RequestMethod.POST)
-	public String eventSubmit(@ModelAttribute("SpringWeb")Event event, Model model) {
-		String day = event.getDay();
-		String month = event.getMonth();
-		String year = event.getYear();
-		//TODO
-		// build string for query
-		// build query with event data - query.insertEvent()
-		// add data to "events" attribute
-		return "result";
+	public String eventSubmit(@ModelAttribute("Event")Event event, Model model) {
+		if (EventChecker.validate(event)){
+			return "/events";
+		} else {
+			String day = event.getDay();
+			String month = event.getMonth();
+			String year = event.getYear();
+			String title = event.getTitle();
+			String description = event.getDescription();
+
+			//TODO
+			// build string for query
+			// build query with event data - query.insertEvent()
+			// add data to "events" attribute
+			return "result";
+		}
 	}
 	@RequestMapping(value="/eventsList")
 	public String eventsList(Model model) {

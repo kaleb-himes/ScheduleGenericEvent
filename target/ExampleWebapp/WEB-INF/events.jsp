@@ -9,6 +9,13 @@
     New Event
 </h1>
 <form:form method="POST" action ="/web/addEvent">
+    Title:
+    <form:input path="title" />
+    <br />
+    Description:
+    <form:textarea path="description" />
+    <br />
+    <br />
 <form:select path="month">
     <option> - Month - </option>
     <option value="01">January</option>
