@@ -10,23 +10,23 @@ import java.time.LocalDateTime;
  * @author Robert Weber
  */
 public class Event {
-    @NotNull(message="This is a required field")
+    @NotNull(message="You must select a day")
     private String day;
-    @NotNull(message="This is a required field")
+    @NotNull(message="You must select a month")
     private String month;
-    @NotNull(message="This is a required field")
+    @NotNull(message="You must select a year")
     private String year;
-    @NotEmpty(message="This is a required field")
+    @NotEmpty(message="You must enter a title")
     private String title;
-    @NotEmpty(message="This is a required field")
+    @NotEmpty(message="You must enter a description")
     private String description;
-    @NotEmpty(message="This is a required field")
+    @NotEmpty(message="You must enter an address")
     private String streetAddress;
-    @NotEmpty(message="This is a required field")
+    @NotEmpty(message="You must enter a city")
     private String city;
-    @NotNull(message="This is a required field")
+    @NotNull(message="You must enter a zipcode")
     private Integer zipCode;
-    @NotNull(message="This is a required field")
+    @NotNull(message="You must select a state")
     private String state;
 //    private String startTime;
 //    private String startTimePeriod;
