@@ -12,18 +12,22 @@
     Title:
     <br />
     <form:input path="title" />
+    <form:errors path="title" cssClass="error" />
     <br />
     Description:
     <br />
     <form:textarea path="description" rows="10" cols="50"/>
+    <form:errors path="description" cssClass="error" />
     <br />
     Street Address:
     <br />
     <form:textarea path="streetAddress" />
+    <form:errors path="streetAddress" cssClass="error" />
     <br />
     City:
     <br />
     <form:input path="city" />
+    <form:errors path="city" cssClass="error" />
     <br />
     State:
     <br />
@@ -81,10 +85,12 @@
         <option value="WI">Wisconsin</option>
         <option value="WY">Wyoming</option>
     </form:select>
+    <form:errors path="state" cssClass="error" />
     <br />
     ZipCode:
     <br />
     <form:input path="zipCode" />
+    <form:errors path="zipCode" cssClass="error" />
     <br />
     <br />
 <form:select path="month">
@@ -102,7 +108,9 @@
     <option value="11">November</option>
     <option value="12">December</option>
 </form:select>
-<form:select path="day">
+    <form:errors path="month" cssClass="error" />
+
+    <form:select path="day">
     <option disabled selected value> - Day - </option>
     <option value="01">1</option>
     <option value="02">2</option>
@@ -136,13 +144,16 @@
     <option value="30">30</option>
     <option value="31">31</option>
 </form:select>
-<form:select path="year">
+    <form:errors path="day" cssClass="error" />
+
+    <form:select path="year">
     <option disabled selected value> - Year - </option>
     <option value="2016">2016</option>
     <option value="2017">2017</option>
     <option value="2018">2018</option>
 </form:select>
-<input type="submit" value="Submit Event">
+    <form:errors path="year" cssClass="error" />
+    <input type="submit" value="Submit Event">
  </form:form>
 </body>
 </html>

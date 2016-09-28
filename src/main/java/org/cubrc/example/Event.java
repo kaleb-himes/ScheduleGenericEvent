@@ -1,29 +1,38 @@
 package org.cubrc.example;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.cglib.core.Local;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-
-
 /**
  * @author Robert Weber
  */
 public class Event {
+    @NotNull(message="This is a required field")
     private String day;
+    @NotNull(message="This is a required field")
     private String month;
+    @NotNull(message="This is a required field")
     private String year;
+    @NotEmpty(message="This is a required field")
     private String title;
+    @NotEmpty(message="This is a required field")
     private String description;
+    @NotEmpty(message="This is a required field")
     private String streetAddress;
+    @NotEmpty(message="This is a required field")
     private String city;
-    private int zipCode;
+    @NotNull(message="This is a required field")
+    private Integer zipCode;
+    @NotNull(message="This is a required field")
     private String state;
-    private String startTime;
-    private String startTimePeriod;
-    private String endTime;
-    private String endTimePeriod;
-    private LocalDateTime dateTime;
+//    private String startTime;
+//    private String startTimePeriod;
+//    private String endTime;
+//    private String endTimePeriod;
+//    private LocalDateTime dateTime;
 
     public void setDay(String day){
         this.day = day;
@@ -36,14 +45,14 @@ public class Event {
     }
     public void setTitle(String title) { this.title = title;}
     public void setDescription(String description){this.description = description;}
-    public void setStartTime(String startTime){this.startTime = startTime;}
-    public void setEndTime(String endTime){this.endTime = endTime;}
+//    public void setStartTime(String startTime){this.startTime = startTime;}
+//    public void setEndTime(String endTime){this.endTime = endTime;}
     public void setStreetAddress(String streetAddress){this.streetAddress=streetAddress;}
     public void setState(String state){this.state = state;}
-    public void setZipCode(int zipCode){this.zipCode=zipCode;}
+    public void setZipCode(Integer zipCode){this.zipCode=zipCode;}
     public void setCity(String city){this.city=city;}
-    public void setStartTimePeriod(String startTimePeriod){this.startTimePeriod=startTimePeriod;}
-    public void setEndTimePeriod(String endTimePeriod){this.endTimePeriod=endTimePeriod;}
+//    public void setStartTimePeriod(String startTimePeriod){this.startTimePeriod=startTimePeriod;}
+//    public void setEndTimePeriod(String endTimePeriod){this.endTimePeriod=endTimePeriod;}
 
 
     public String getDay(){
@@ -62,12 +71,12 @@ public class Event {
     public String getDescription(){return this.description; }
     public String getStreetAddress(){return this.streetAddress;}
     public String getState(){return this.state;}
-    public int getZipCode(){return this.zipCode;}
+    public Integer getZipCode(){return this.zipCode;}
     public String getCity(){return this.city;}
-    public String getStartTime(){return this.startTime; }
-    public String getEndTime(){return this.endTime; }
-    public String getStartTimePeriod(){return this.startTimePeriod;}
-    public String getEndTimePeriod(){return this.endTimePeriod;}
+//    public String getStartTime(){return this.startTime; }
+//    public String getEndTime(){return this.endTime; }
+//    public String getStartTimePeriod(){return this.startTimePeriod;}
+//    public String getEndTimePeriod(){return this.endTimePeriod;}
 
 
 }

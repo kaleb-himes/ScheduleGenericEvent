@@ -8,16 +8,87 @@
 <h1>
     New Event
 </h1>
-<form:form method="POST" action ="/web/addEvent">
+<form:form method="POST" action ="/web/addEvent" modelAttribute="Event">
     Title:
+    <br />
     <form:input path="title" />
     <br />
     Description:
-    <form:textarea path="description" />
+    <br />
+    <form:textarea path="description" rows="10" cols="50"/>
+    <br />
+    Street Address:
+    <br />
+    <form:textarea path="streetAddress" />
+    <br />
+    City:
+    <br />
+    <form:input path="city" />
+    <br />
+    State:
+    <br />
+    <form:select path="state">
+        <option disabled selected value>State</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+    </form:select>
+    <br />
+    ZipCode:
+    <br />
+    <form:input path="zipCode" />
     <br />
     <br />
 <form:select path="month">
-    <option> - Month - </option>
+    <option disabled selected value> - Month - </option>
     <option value="01">January</option>
     <option value="02">Febuary</option>
     <option value="03">March</option>
@@ -32,7 +103,7 @@
     <option value="12">December</option>
 </form:select>
 <form:select path="day">
-    <option> - Day - </option>
+    <option disabled selected value> - Day - </option>
     <option value="01">1</option>
     <option value="02">2</option>
     <option value="03">3</option>
@@ -66,7 +137,7 @@
     <option value="31">31</option>
 </form:select>
 <form:select path="year">
-    <option> - Year - </option>
+    <option disabled selected value> - Year - </option>
     <option value="2016">2016</option>
     <option value="2017">2017</option>
     <option value="2018">2018</option>
