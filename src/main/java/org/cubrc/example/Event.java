@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.cglib.core.Local;
 
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
+
 /**
  * @author Robert Weber
  */
