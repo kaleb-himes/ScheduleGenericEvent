@@ -2,6 +2,9 @@
 
 .mtj.tmp/
 
+.idea/
+target/
+
 *.jar
 *.war
 *.ear
