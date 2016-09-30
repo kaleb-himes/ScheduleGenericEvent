@@ -17,8 +17,12 @@ public class Query {
                 "PREFIX agent: <http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#>" +
                 "PREFIX info: <http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#>" +
                 "INSERT DATA { " +
-                "agent:Event ero:bearer_of to:day . " +
-                "to:day info:has_text_value " + event.getDay() + " ; } " ;
+                "agent:Event ero:bearer_of to:Day . " +
+                "to:Day info:has_text_value " + event.getDay() + " . } " +
+                "agent:Event ero:bearer_of to:Month . " +
+                "to:Month info:has_text_value " + event.getMonth() + " . } " +
+                "agent:Event ero:bearer_of to:Year . " +
+                "to:Year info:has_text_value " + event.getYear() + " . } ";
         String response = client.post("", query);
     }
     public String selectEvent(){
