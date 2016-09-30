@@ -23,7 +23,6 @@ public class Event {
     private String startTimePeriod;
     private String endTime;
     private String endTimePeriod;
-    private LocalDateTime dateTime;
 
     public void setDay(String day){
         this.day = day;
