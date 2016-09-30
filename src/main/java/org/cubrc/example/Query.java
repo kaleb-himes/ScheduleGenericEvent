@@ -11,7 +11,7 @@ public class Query {
 
     public void insertEvent(Event event){
         RestClient client = new RestClient();
-        client.setServerToQuery();
+        client.setServerToUpdate();
         String query = "PREFIX ero: <http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#>" +
                 "PREFIX to: <http://www.ontologylibrary.mil/CommonCore/Mid/TimeOntology#>" +
                 "PREFIX agent: <http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#>" +
@@ -23,11 +23,14 @@ public class Query {
                 "to:Month info:has_text_value " + event.getMonth() + " . } " +
                 "agent:Event ero:bearer_of to:Year . " +
                 "to:Year info:has_text_value " + event.getYear() + " . } ";
-        String response = client.post("", query);
+        client.post("", query);
     }
     public String selectEvent(){
-        // TODO: Implement SELECT Query
-        return "";
+        RestClient client = new RestClient();
+        client.setServerToQuery();
+        String query = "SELECT ?subject ?predicate ?object" +
+        " WHERE { ?subject ?predicate ?object } ";
+        return client.post("", query);
     }
 
 }
